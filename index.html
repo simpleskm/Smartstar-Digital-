@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Smartstar Digital Agency - Web, branding, marketing, tutoring, and chess coaching." />
+  <title>Smartstar Digital Agency</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <div class="logo">Smartstar</div>
+
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        &#9776;
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container hero-content">
+      <h1>Design. Build. Grow.</h1>
+      <p>Creative digital solutions that work.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn">Our Services</a>
+        <a href="#contact" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About</h2>
+      <p>We create clean, smart, and effective digital solutions.</p>
+    </div>
+  </section>
+
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>Modern responsive websites.</p>
+        </div>
+        <div class="card">
+          <h3>Branding</h3>
+          <p>Clear and memorable identity.</p>
+        </div>
+        <div class="card">
+          <h3>Marketing</h3>
+          <p>Growth-focused digital campaigns.</p>
+        </div>
+        <div class="card">
+          <h3>TutorPlus</h3>
+          <p>Simple lessons, real progress.</p>
+        </div>
+        <div class="card">
+          <h3>Chess Coaching</h3>
+          <p>Think better. Play better.</p>
+        </div>
+        <div class="card">
+          <h3>Strategy</h3>
+          <p>Smart content and direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="admissions" class="section admissions">
+    <div class="container">
+      <h2>Admissions</h2>
+      <p>Apply for tutoring or chess coaching in a few simple steps.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Who</h3>
+          <p>Students, beginners, and growing learners.</p>
+        </div>
+        <div class="card">
+          <h3>Programs</h3>
+          <p>Tutoring, mentoring, and chess classes.</p>
+        </div>
+        <div class="card">
+          <h3>Apply</h3>
+          <p>Send your details through the form below.</p>
+        </div>
+      </div>
+      <a href="#contact" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <h2>Our Work</h2>
+      <div class="portfolio-grid">
+        <img src="[picsum.photos](https://picsum.photos/400/300?random=2)" alt="Project 1"/>
+        <img src="[picsum.photos](https://picsum.photos/400/300?random=3)" alt="Project 2"/>
+        <img src="[picsum.photos](https://picsum.photos/400/300?random=4)" alt="Project 3"/>
+        <img src="[picsum.photos](https://picsum.photos/400/300?random=5)" alt="Project 4"/>
+        <img src="[picsum.photos](https://picsum.photos/400/300?random=6)" alt="Project 5"/>
+        <img src="[picsum.photos](https://picsum.photos/400/300?random=7)" alt="Project 6"/>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section testimonials">
+    <div class="container">
+      <h2>Reviews</h2>
+      <div class="grid">
+        <div class="card">
+          <p>"Professional and creative."</p>
+          <h4>Tom</h4>
+        </div>
+        <div class="card">
+          <p>"Clean work and fast delivery."</p>
+          <h4>John</h4>
+        </div>
+        <div class="card">
+          <p>"A team that gets results."</p>
+          <h4>Jane</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <select name="interest" required>
+          <option value="">Select Service</option>
+          <option value="web-design">Web Design</option>
+          <option value="branding">Branding</option>
+          <option value="marketing">Marketing</option>
+          <option value="tutoring">TutorPlus</option>
+          <option value="chess">Chess Coaching</option>
+          <option value="admissions">Admissions</option>
+        </select>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Smartstar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script defer src="main.js"></script>
+</body>
+</html>
