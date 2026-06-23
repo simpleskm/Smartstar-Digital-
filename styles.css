@@ -1,3 +1,4 @@
+```css
 /* =========================
    GOOGLE FONT
 ========================= */
@@ -18,10 +19,45 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#0b1120;
-    color:#f8fafc;
+    background:linear-gradient(
+        135deg,
+        #e0f2fe 0%,
+        #f8fbff 40%,
+        #dbeafe 100%
+    );
+    color:#1e293b;
     line-height:1.7;
     overflow-x:hidden;
+    position:relative;
+}
+
+/* Floating Gradient Effects */
+body::before{
+    content:"";
+    position:fixed;
+    width:350px;
+    height:350px;
+    background:#60a5fa;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.25;
+    top:-100px;
+    left:-100px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:400px;
+    height:400px;
+    background:#22d3ee;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.2;
+    bottom:-100px;
+    right:-100px;
+    z-index:-1;
 }
 
 /* =========================
@@ -45,10 +81,17 @@ h2{
     text-align:center;
     font-size:2.8rem;
     margin-bottom:20px;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .section p{
-    color:#cbd5e1;
+    color:#475569;
 }
 
 .grid{
@@ -66,8 +109,9 @@ h2{
     top:0;
     z-index:1000;
     backdrop-filter:blur(20px);
-    background:rgba(11,17,32,.8);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.85);
+    border-bottom:1px solid rgba(59,130,246,.12);
+    box-shadow:0 4px 20px rgba(59,130,246,.08);
 }
 
 .nav{
@@ -78,10 +122,15 @@ h2{
 }
 
 .logo{
-    font-size:1.8rem;
+    font-size:1.9rem;
     font-weight:800;
-    color:#fff;
-    letter-spacing:1px;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .nav-links{
@@ -91,21 +140,22 @@ h2{
 }
 
 .nav-links a{
-    color:#dbeafe;
+    color:#334155;
     text-decoration:none;
     font-weight:500;
     transition:.3s;
 }
 
-.nav-links a:hover{
-    color:#60a5fa;
+.nav-links a:hover,
+.nav-links a.active{
+    color:#2563eb;
 }
 
 .menu-toggle{
     display:none;
     background:none;
     border:none;
-    color:white;
+    color:#2563eb;
     font-size:1.8rem;
     cursor:pointer;
 }
@@ -119,9 +169,15 @@ h2{
     align-items:center;
     justify-content:center;
     text-align:center;
+
     background:
-    linear-gradient(rgba(11,17,32,.75),rgba(11,17,32,.9)),
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,.82),
+        rgba(6,182,212,.72)
+    ),
     url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80');
+
     background-size:cover;
     background-position:center;
 }
@@ -133,12 +189,14 @@ h2{
 .hero h1{
     font-size:clamp(3rem,7vw,6rem);
     line-height:1.1;
+    color:white;
     margin-bottom:20px;
 }
 
 .hero p{
     font-size:1.3rem;
-    color:#cbd5e1;
+    color:white;
+    opacity:.95;
     margin-bottom:40px;
 }
 
@@ -155,36 +213,60 @@ h2{
 .btn{
     display:inline-block;
     padding:15px 35px;
-    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
     color:white;
     text-decoration:none;
     border-radius:50px;
     font-weight:600;
-    transition:.35s;
     border:none;
     cursor:pointer;
+    transition:.35s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 12px 25px rgba(37,99,235,.35);
+    transform:translateY(-4px);
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
 }
 
 .btn-outline{
     background:transparent;
-    border:2px solid rgba(255,255,255,.25);
+    border:2px solid rgba(255,255,255,.4);
 }
 
 .btn-outline:hover{
     background:white;
-    color:#111827;
+    color:#2563eb;
 }
 
 /* =========================
-   ABOUT
+   SECTIONS
 ========================= */
+.about,
+.admissions,
+.testimonials{
+    background:linear-gradient(
+        180deg,
+        #eff6ff,
+        #dbeafe
+    );
+}
+
+.services,
+.portfolio,
+.contact{
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #eff6ff
+    );
+}
+
 .about{
-    background:#111827;
     text-align:center;
 }
 
@@ -195,58 +277,36 @@ h2{
 }
 
 /* =========================
-   CARDS
+   GLASS CARDS
 ========================= */
 .card{
-    background:rgba(255,255,255,.05);
+    background:rgba(255,255,255,.75);
     backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.08);
+    border:1px solid rgba(59,130,246,.12);
     padding:35px;
     border-radius:24px;
     transition:.35s;
+    box-shadow:0 10px 30px rgba(37,99,235,.08);
 }
 
 .card:hover{
     transform:translateY(-10px);
-    border-color:rgba(96,165,250,.4);
-    box-shadow:0 20px 50px rgba(0,0,0,.3);
+    box-shadow:0 25px 50px rgba(37,99,235,.15);
+    border-color:#60a5fa;
 }
 
 .card h3{
     margin-bottom:12px;
-    font-size:1.4rem;
+    color:#0f172a;
 }
 
 .card p{
-    color:#94a3b8;
-}
-
-/* =========================
-   SERVICES
-========================= */
-.services{
-    background:#0f172a;
-}
-
-/* =========================
-   ADMISSIONS
-========================= */
-.admissions{
-    background:#111827;
-    text-align:center;
-}
-
-.admissions .btn{
-    margin-top:35px;
+    color:#64748b;
 }
 
 /* =========================
    PORTFOLIO
 ========================= */
-.portfolio{
-    background:#0f172a;
-}
-
 .portfolio-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -259,6 +319,7 @@ h2{
     object-fit:cover;
     border-radius:20px;
     transition:.5s;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
 }
 
 .portfolio-grid img:hover{
@@ -269,12 +330,7 @@ h2{
    TESTIMONIALS
 ========================= */
 .testimonials{
-    background:#111827;
     text-align:center;
-}
-
-.testimonials .card{
-    position:relative;
 }
 
 .testimonials .card p{
@@ -283,16 +339,12 @@ h2{
 }
 
 .testimonials h4{
-    color:#60a5fa;
+    color:#2563eb;
 }
 
 /* =========================
-   CONTACT
+   CONTACT FORM
 ========================= */
-.contact{
-    background:#0f172a;
-}
-
 .contact-form{
     max-width:750px;
     margin:auto;
@@ -306,12 +358,11 @@ h2{
 .contact-form select{
     width:100%;
     padding:16px;
-    border:none;
     border-radius:14px;
-    background:rgba(255,255,255,.06);
-    color:white;
+    background:white;
+    border:1px solid rgba(59,130,246,.15);
+    color:#1e293b;
     font-size:1rem;
-    border:1px solid rgba(255,255,255,.08);
     transition:.3s;
 }
 
@@ -331,22 +382,37 @@ h2{
    FOOTER
 ========================= */
 .footer{
-    background:#020617;
-    padding:30px 0;
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #06b6d4
+    );
     text-align:center;
-    border-top:1px solid rgba(255,255,255,.05);
+    padding:30px 0;
 }
 
 .footer p{
-    color:#94a3b8;
+    color:white;
 }
 
 /* =========================
-   SCROLL ANIMATION
+   ANIMATIONS
 ========================= */
 .card,
-.portfolio-grid img{
-    animation:fadeUp .8s ease;
+.portfolio-grid img,
+.about,
+.contact-form{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.card.show,
+.portfolio-grid img.show,
+.about.show,
+.contact-form.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 @keyframes fadeUp{
@@ -373,13 +439,14 @@ h2{
         position:absolute;
         top:80px;
         right:0;
-        width:250px;
-        background:#111827;
+        width:260px;
+        background:white;
         flex-direction:column;
         padding:25px;
         gap:20px;
         display:none;
         border-radius:0 0 0 20px;
+        box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
 
     .nav-links.active{
@@ -398,3 +465,4 @@ h2{
         padding:80px 0;
     }
 }
+```
