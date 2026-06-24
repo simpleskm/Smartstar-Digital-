@@ -57,7 +57,7 @@ Whether you're reviewing the design, code quality, responsiveness, or functional
 Creating smart digital solutions that help businesses, students, and learners grow.
 
 **##Live Demo**
-
+ https://simpleskm.github.io/Smartstar-Digital-/
 
 ---
 
